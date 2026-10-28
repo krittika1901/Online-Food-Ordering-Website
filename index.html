@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Food Ordering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="home">
+        <h1>Online Food Ordering Website</h1>
+        <h3>Welcome!</h3>
+        <p>Order your favourite food here.</p>
+        <h3>Our Food Menu</h3>
+
+        <p>🍕 Pizza - ₹150</p>
+        <p>🍔 Burger - ₹100</p>
+        <p>🍟 French Fries - ₹80</p>
+
+        <button onclick="showMenu()">Order Now</button>
+    </div>
+
+    <div id="menu" class="hidden">
+        <h1>Our Food Menu</h1>
+
+        <h3>🍕 Pizza</h3>
+        <p>Price: ₹150</p>
+
+        <h3>🍔 Burger</h3>
+        <p>Price: ₹100</p>
+
+        <h3>🍟 French Fries</h3>
+        <p>Price: ₹80</p>
+
+        <h3>🥤 Juice</h3>
+        <p>Price: ₹50</p>
+
+        <button onclick="showOrdering()">Continue</button>
+    </div>
+
+    <div id="ordering" class="hidden">
+        <h1>Food Ordering</h1>
+
+        <p>🍕 Pizza - ₹150</p>
+        <button onclick="addToCart(150)">Add to Cart</button>
+
+        <p>🍔 Burger - ₹100</p>
+        <button onclick="addToCart(100)">Add to Cart</button>
+
+        <p>🍟 French Fries - ₹80</p>
+        <button onclick="addToCart(80)">Add to Cart</button>
+
+        <p>🥤 Juice - ₹50</p>
+        <button onclick="addToCart(50)">Add to Cart</button>
+
+        <h3>🛒 Total: ₹<span id="total">0</span></h3>
+
+        <button onclick="showBill()">Final Bill</button>
+    </div>
+
+    <div id="bill" class="hidden">
+        <h1>Final Bill</h1>
+        <div id="billItems"></div>
+        <h3>Total Bill: ₹<span id="billTotal">0</span></h3>
+        <p>Thank you for ordering!</p>
+        <button onclick="location.reload()">Order Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+      </html>
